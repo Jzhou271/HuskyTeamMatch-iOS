@@ -11,9 +11,11 @@ class SignupView: UIView {
     var labelName:UILabel!
     var labelEmail:UILabel!
     var labelPassword:UILabel!
+    var labelLocation:UILabel!
     var textFieldName:UITextField!
     var textFieldEmail:UITextField!
     var textFieldPassword:UITextField!
+    var textFieldLocation:UITextField!
     var buttonSignup:UIButton!
 
     override init(frame: CGRect) {
@@ -24,8 +26,10 @@ class SignupView: UIView {
         setupLabelName()
         setupLabelEmail()
         setupLabelPassword()
+        setupLabelLocation()
         setupTextFieldEmail()
         setupTextFieldPassword()
+        setupTextFieldLocation()
         setupButtonSignup()
         
         initConstraints()
@@ -52,10 +56,16 @@ class SignupView: UIView {
         self.addSubview(labelPassword)
     }
     
+    func setupLabelLocation(){
+        labelLocation = UILabel()
+        labelLocation.text = "Location"
+        labelLocation.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(labelLocation)
+    }
+    
     func setupTextFieldName(){
         textFieldName = UITextField()
         textFieldName.autocapitalizationType = .none
-        textFieldName.placeholder = "Name"
         textFieldName.borderStyle = .roundedRect
         textFieldName.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(textFieldName)
@@ -64,7 +74,6 @@ class SignupView: UIView {
     func setupTextFieldEmail(){
         textFieldEmail = UITextField()
         textFieldEmail.autocapitalizationType = .none
-        textFieldEmail.placeholder = "i.e. abc@abc.com"
         textFieldEmail.borderStyle = .roundedRect
         textFieldEmail.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(textFieldEmail)
@@ -73,10 +82,17 @@ class SignupView: UIView {
     func setupTextFieldPassword(){
         textFieldPassword = UITextField()
         textFieldPassword.autocapitalizationType = .none
-        textFieldPassword.placeholder = "Password"
         textFieldPassword.borderStyle = .roundedRect
         textFieldPassword.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(textFieldPassword)
+    }
+    
+    func setupTextFieldLocation(){
+        textFieldLocation = UITextField()
+        textFieldLocation.autocapitalizationType = .none
+        textFieldLocation.borderStyle = .roundedRect
+        textFieldLocation.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(textFieldLocation)
     }
     
     func setupButtonSignup(){
@@ -114,7 +130,15 @@ class SignupView: UIView {
             textFieldPassword.leadingAnchor.constraint(equalTo: labelPassword.leadingAnchor),
             textFieldPassword.trailingAnchor.constraint(equalTo: labelPassword.trailingAnchor),
             
-            buttonSignup.topAnchor.constraint(equalTo: textFieldPassword.bottomAnchor, constant: 10),
+            labelLocation.topAnchor.constraint(equalTo: textFieldPassword.bottomAnchor, constant: 10),
+            labelLocation.leadingAnchor.constraint(equalTo: textFieldEmail.leadingAnchor),
+            labelLocation.trailingAnchor.constraint(equalTo: textFieldEmail.trailingAnchor),
+            
+            textFieldLocation.topAnchor.constraint(equalTo: labelLocation.bottomAnchor, constant: 10),
+            textFieldLocation.leadingAnchor.constraint(equalTo: labelPassword.leadingAnchor),
+            textFieldLocation.trailingAnchor.constraint(equalTo: labelPassword.trailingAnchor),
+            
+            buttonSignup.topAnchor.constraint(equalTo: textFieldLocation.bottomAnchor, constant: 10),
             buttonSignup.leadingAnchor.constraint(equalTo: textFieldPassword.leadingAnchor),
             buttonSignup.trailingAnchor.constraint(equalTo: textFieldPassword.trailingAnchor),
         ])
