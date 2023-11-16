@@ -13,6 +13,8 @@
 		F3841CE62B06970300152382 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3841CE42B06970300152382 /* Main.storyboard */; };
 		F3841CE82B06970500152382 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3841CE72B06970500152382 /* Assets.xcassets */; };
 		F3841CEB2B06970500152382 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3841CE92B06970500152382 /* LaunchScreen.storyboard */; };
+		F3841CF32B0698CB00152382 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F3841CF22B0698CA00152382 /* README.md */; };
+		F3841CF52B069A9800152382 /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3841CF42B069A9800152382 /* LandingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		F3841CE72B06970500152382 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3841CEA2B06970500152382 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F3841CEC2B06970500152382 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3841CF22B0698CA00152382 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		F3841CF42B069A9800152382 /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,25 @@
 		F3841CDD2B06970300152382 /* HuskyTeamMatch_final */ = {
 			isa = PBXGroup;
 			children = (
+				F3841CF62B069C0A00152382 /* LandingPage */,
 				F3841CDE2B06970300152382 /* AppDelegate.swift */,
 				F3841CE02B06970300152382 /* SceneDelegate.swift */,
-				F3841CE22B06970300152382 /* ViewController.swift */,
 				F3841CE42B06970300152382 /* Main.storyboard */,
 				F3841CE72B06970500152382 /* Assets.xcassets */,
 				F3841CE92B06970500152382 /* LaunchScreen.storyboard */,
+				F3841CF22B0698CA00152382 /* README.md */,
 				F3841CEC2B06970500152382 /* Info.plist */,
 			);
 			path = HuskyTeamMatch_final;
+			sourceTree = "<group>";
+		};
+		F3841CF62B069C0A00152382 /* LandingPage */ = {
+			isa = PBXGroup;
+			children = (
+				F3841CE22B06970300152382 /* ViewController.swift */,
+				F3841CF42B069A9800152382 /* LandingView.swift */,
+			);
+			path = LandingPage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +141,7 @@
 			files = (
 				F3841CEB2B06970500152382 /* LaunchScreen.storyboard in Resources */,
 				F3841CE82B06970500152382 /* Assets.xcassets in Resources */,
+				F3841CF32B0698CB00152382 /* README.md in Resources */,
 				F3841CE62B06970300152382 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,6 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3841CF52B069A9800152382 /* LandingView.swift in Sources */,
 				F3841CE32B06970300152382 /* ViewController.swift in Sources */,
 				F3841CDF2B06970300152382 /* AppDelegate.swift in Sources */,
 				F3841CE12B06970300152382 /* SceneDelegate.swift in Sources */,

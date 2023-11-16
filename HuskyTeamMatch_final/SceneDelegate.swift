@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  HuskyTeamMatch_final
 //
-//  Created by junjia wang on 11/16/23.
+//  Created by Tian Ma on 11/16/23.
 //
 
 import UIKit
