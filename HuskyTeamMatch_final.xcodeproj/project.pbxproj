@@ -17,6 +17,8 @@
 		F3841CF52B069A9800152382 /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3841CF42B069A9800152382 /* LandingView.swift */; };
 		F3841CF82B06A0F200152382 /* SigninView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3841CF72B06A0F200152382 /* SigninView.swift */; };
 		F3841CFA2B06A16D00152382 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3841CF92B06A16D00152382 /* SigninViewController.swift */; };
+		F3841CFD2B06A38D00152382 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3841CFC2B06A38D00152382 /* SignupViewController.swift */; };
+		F3841CFF2B06A39D00152382 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3841CFE2B06A39D00152382 /* SignupView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		F3841CF42B069A9800152382 /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
 		F3841CF72B06A0F200152382 /* SigninView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninView.swift; sourceTree = "<group>"; };
 		F3841CF92B06A16D00152382 /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
+		F3841CFC2B06A38D00152382 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		F3841CFE2B06A39D00152382 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 		F3841CDD2B06970300152382 /* HuskyTeamMatch_final */ = {
 			isa = PBXGroup;
 			children = (
+				F3841D002B06A3A400152382 /* SignupPage */,
 				F3841CFB2B06A26D00152382 /* SigninPage */,
 				F3841CF62B069C0A00152382 /* LandingPage */,
 				F3841CDE2B06970300152382 /* AppDelegate.swift */,
@@ -93,6 +98,15 @@
 				F3841CF92B06A16D00152382 /* SigninViewController.swift */,
 			);
 			path = SigninPage;
+			sourceTree = "<group>";
+		};
+		F3841D002B06A3A400152382 /* SignupPage */ = {
+			isa = PBXGroup;
+			children = (
+				F3841CFC2B06A38D00152382 /* SignupViewController.swift */,
+				F3841CFE2B06A39D00152382 /* SignupView.swift */,
+			);
+			path = SignupPage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,8 +182,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3841CF52B069A9800152382 /* LandingView.swift in Sources */,
+				F3841CFD2B06A38D00152382 /* SignupViewController.swift in Sources */,
 				F3841CE32B06970300152382 /* ViewController.swift in Sources */,
 				F3841CFA2B06A16D00152382 /* SigninViewController.swift in Sources */,
+				F3841CFF2B06A39D00152382 /* SignupView.swift in Sources */,
 				F3841CF82B06A0F200152382 /* SigninView.swift in Sources */,
 				F3841CDF2B06970300152382 /* AppDelegate.swift in Sources */,
 				F3841CE12B06970300152382 /* SceneDelegate.swift in Sources */,
