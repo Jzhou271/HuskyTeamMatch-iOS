@@ -16,9 +16,13 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        landingView.buttonSignin.addTarget(self, action: #selector(onButtonSigninTapped), for: .touchUpInside)
     }
 
-
+    @objc func onButtonSigninTapped(){
+        let signinViewController = SigninViewController()
+        navigationController?.pushViewController(signinViewController, animated: true)
+    }
 }
 
