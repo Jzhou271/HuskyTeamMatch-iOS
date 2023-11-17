@@ -22,8 +22,7 @@ class SignupViewController: UIViewController {
     }
     
     @objc func buttonSignupTapped() {
-        let tabNavVC = TabNavBarViewController()
-        self.navigationController?.pushViewController(tabNavVC, animated: true)
+        registerNewAccount()
     }
 
 }
