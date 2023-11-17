@@ -9,7 +9,7 @@ import UIKit
 
 class LandingView: UIView {
     var labelTitle:UILabel!
-    var buttonLogin:UIButton!
+    var buttonSignin:UIButton!
     var buttonSignup:UIButton!
 
     override init(frame: CGRect) {
@@ -31,11 +31,11 @@ class LandingView: UIView {
     }
     
     func setupButtonLogin(){
-        buttonLogin = UIButton(type: .system)
-        buttonLogin.titleLabel?.font = .boldSystemFont(ofSize: 16)
-        buttonLogin.setTitle("Sign in", for: .normal)
-        buttonLogin.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(buttonLogin)
+        buttonSignin = UIButton(type: .system)
+        buttonSignin.titleLabel?.font = .boldSystemFont(ofSize: 16)
+        buttonSignin.setTitle("Sign in", for: .normal)
+        buttonSignin.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(buttonSignin)
     }
     
     func setupButtonSignup(){
@@ -53,11 +53,11 @@ class LandingView: UIView {
             labelTitle.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 8),
             labelTitle.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -8),
             
-            buttonLogin.topAnchor.constraint(equalTo: labelTitle.bottomAnchor, constant: 10),
-            buttonLogin.leadingAnchor.constraint(equalTo: labelTitle.leadingAnchor),
-            buttonLogin.trailingAnchor.constraint(equalTo: labelTitle.trailingAnchor),
+            buttonSignin.topAnchor.constraint(equalTo: labelTitle.bottomAnchor, constant: 10),
+            buttonSignin.leadingAnchor.constraint(equalTo: labelTitle.leadingAnchor),
+            buttonSignin.trailingAnchor.constraint(equalTo: labelTitle.trailingAnchor),
             
-            buttonSignup.topAnchor.constraint(equalTo: buttonLogin.bottomAnchor, constant: 10),
+            buttonSignup.topAnchor.constraint(equalTo: buttonSignin.bottomAnchor, constant: 10),
             buttonSignup.leadingAnchor.constraint(equalTo: labelTitle.leadingAnchor),
             buttonSignup.trailingAnchor.constraint(equalTo: labelTitle.trailingAnchor),
         ])
