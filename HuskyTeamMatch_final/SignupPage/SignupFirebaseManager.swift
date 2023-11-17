@@ -15,7 +15,19 @@ extension SignupViewController{
         if let name = signupView.textFieldName.text,
            let email = signupView.textFieldEmail.text,
            let password = signupView.textFieldPassword.text{
-            //Validations....
+            if name.isEmpty {
+                showErrorAlert("Name cannot be empty", self)
+                return
+            }
+            if email.isEmpty && !isValidEmail(email) {
+                showErrorAlert("Email cannot be empty and have to be a NEU email", self)
+                return
+            }
+            if password.isEmpty && password.count < 6 {
+                showErrorAlert("Password has to be at least 6 characters", self)
+                return
+            }
+            
             Auth.auth().createUser(withEmail: email, password: password, completion: {result, error in
                 if error == nil{
                     //MARK: the user creation is successful...
@@ -28,6 +40,7 @@ extension SignupViewController{
                 }else{
                     //MARK: there is a error creating the user...
                     print(error)
+                    showErrorAlert("Fail to create user", self)
                 }
             })
         }

@@ -32,6 +32,7 @@
 		F3841CFA2B06A16D00152382 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3841CF92B06A16D00152382 /* SigninViewController.swift */; };
 		F3841CFD2B06A38D00152382 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3841CFC2B06A38D00152382 /* SignupViewController.swift */; };
 		F3841CFF2B06A39D00152382 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3841CFE2B06A39D00152382 /* SignupView.swift */; };
+		F3B260472B0804DF007ACD5D /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B260462B0804DF007ACD5D /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		F3841CF92B06A16D00152382 /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
 		F3841CFC2B06A38D00152382 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		F3841CFE2B06A39D00152382 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		F3B260462B0804DF007ACD5D /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 				F3841CF22B0698CA00152382 /* README.md */,
 				F3841CEC2B06970500152382 /* Info.plist */,
 				F33364A72B07E90500905648 /* GoogleService-Info.plist */,
+				F3B260462B0804DF007ACD5D /* Utilities.swift */,
 			);
 			path = HuskyTeamMatch_final;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				F3841CFA2B06A16D00152382 /* SigninViewController.swift in Sources */,
 				F33364B52B07FAB800905648 /* SignupFirebaseManager.swift in Sources */,
 				1D4E0DD02B071F590001F06A /* CommunityViewController.swift in Sources */,
+				F3B260472B0804DF007ACD5D /* Utilities.swift in Sources */,
 				1D4E0DCC2B071F220001F06A /* MyEventView.swift in Sources */,
 				F3841CFF2B06A39D00152382 /* SignupView.swift in Sources */,
 				F3841CF82B06A0F200152382 /* SigninView.swift in Sources */,

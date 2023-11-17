@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SigninViewController: UIViewController {
     let signinView = SigninView()
@@ -22,8 +23,36 @@ class SigninViewController: UIViewController {
     }
     
     @objc func buttonSigninTapped() {
-        let tabNavVC = TabNavBarViewController()
-        self.navigationController?.pushViewController(tabNavVC, animated: true)
+        if let email = signinView.textFieldEmail.text,
+           let password = signinView.textFieldPassword.text{
+            if email.isEmpty || !isValidEmail(email) {
+                showErrorAlert("Invalid email", self)
+                return
+            }
+            if password.isEmpty {
+                showErrorAlert("Invalid password", self)
+                return
+            }
+
+            //MARK: sign-in logic for Firebase...
+            self.signInToFirebase(email: email, password: password)
+        }
     }
 
+    func signInToFirebase(email: String, password: String){
+        //MARK: can you display progress indicator here?
+        //MARK: authenticating the user...
+        Auth.auth().signIn(withEmail: email, password: password, completion: {(result, error) in
+            if error == nil{
+                // push main screen
+                let tabNavVC = TabNavBarViewController()
+                self.navigationController?.popViewController(animated: true)
+                self.navigationController?.pushViewController(tabNavVC, animated: true)
+            }else{
+                //MARK: alert that no user found or password wrong...
+                showErrorAlert("Invalid user or wrong password", self)
+            }
+            
+        })
+    }
 }

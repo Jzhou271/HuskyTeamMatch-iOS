@@ -30,7 +30,7 @@ class SigninView: UIView {
     
     func setupLabelEmail(){
         labelEmail = UILabel()
-        labelEmail.text = "Username"
+        labelEmail.text = "Email"
         labelEmail.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(labelEmail)
     }
