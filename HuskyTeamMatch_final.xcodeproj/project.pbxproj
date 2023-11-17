@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D4E0DC32B071D490001F06A /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4E0DC22B071D490001F06A /* MyProfileViewController.swift */; };
+		1D4E0DC52B071D590001F06A /* MyProfielView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4E0DC42B071D590001F06A /* MyProfielView.swift */; };
+		1D4E0DC82B071E370001F06A /* TabNavBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4E0DC72B071E370001F06A /* TabNavBarViewController.swift */; };
+		1D4E0DCA2B071F130001F06A /* MyEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4E0DC92B071F130001F06A /* MyEventViewController.swift */; };
+		1D4E0DCC2B071F220001F06A /* MyEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4E0DCB2B071F220001F06A /* MyEventView.swift */; };
+		1D4E0DCE2B071F4B0001F06A /* CommunityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4E0DCD2B071F4B0001F06A /* CommunityView.swift */; };
+		1D4E0DD02B071F590001F06A /* CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4E0DCF2B071F590001F06A /* CommunityViewController.swift */; };
 		F3841CDF2B06970300152382 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3841CDE2B06970300152382 /* AppDelegate.swift */; };
 		F3841CE12B06970300152382 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3841CE02B06970300152382 /* SceneDelegate.swift */; };
 		F3841CE32B06970300152382 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3841CE22B06970300152382 /* ViewController.swift */; };
@@ -22,6 +29,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D4E0DC22B071D490001F06A /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
+		1D4E0DC42B071D590001F06A /* MyProfielView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfielView.swift; sourceTree = "<group>"; };
+		1D4E0DC72B071E370001F06A /* TabNavBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavBarViewController.swift; sourceTree = "<group>"; };
+		1D4E0DC92B071F130001F06A /* MyEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventViewController.swift; sourceTree = "<group>"; };
+		1D4E0DCB2B071F220001F06A /* MyEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventView.swift; sourceTree = "<group>"; };
+		1D4E0DCD2B071F4B0001F06A /* CommunityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityView.swift; sourceTree = "<group>"; };
+		1D4E0DCF2B071F590001F06A /* CommunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityViewController.swift; sourceTree = "<group>"; };
 		F3841CDB2B06970300152382 /* HuskyTeamMatch_final.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HuskyTeamMatch_final.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3841CDE2B06970300152382 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3841CE02B06970300152382 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +63,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D4E0DBF2B071D0F0001F06A /* MyEvent Screen */ = {
+			isa = PBXGroup;
+			children = (
+				1D4E0DC92B071F130001F06A /* MyEventViewController.swift */,
+				1D4E0DCB2B071F220001F06A /* MyEventView.swift */,
+			);
+			path = "MyEvent Screen";
+			sourceTree = "<group>";
+		};
+		1D4E0DC02B071D1B0001F06A /* Community Screen */ = {
+			isa = PBXGroup;
+			children = (
+				1D4E0DCD2B071F4B0001F06A /* CommunityView.swift */,
+				1D4E0DCF2B071F590001F06A /* CommunityViewController.swift */,
+			);
+			path = "Community Screen";
+			sourceTree = "<group>";
+		};
+		1D4E0DC12B071D250001F06A /* Profile Screen */ = {
+			isa = PBXGroup;
+			children = (
+				1D4E0DC22B071D490001F06A /* MyProfileViewController.swift */,
+				1D4E0DC42B071D590001F06A /* MyProfielView.swift */,
+			);
+			path = "Profile Screen";
+			sourceTree = "<group>";
+		};
+		1D4E0DC62B071DF50001F06A /* TabNav Bar */ = {
+			isa = PBXGroup;
+			children = (
+				1D4E0DC72B071E370001F06A /* TabNavBarViewController.swift */,
+			);
+			path = "TabNav Bar";
+			sourceTree = "<group>";
+		};
 		F3841CD22B06970300152382 = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +117,10 @@
 		F3841CDD2B06970300152382 /* HuskyTeamMatch_final */ = {
 			isa = PBXGroup;
 			children = (
+				1D4E0DC62B071DF50001F06A /* TabNav Bar */,
+				1D4E0DC12B071D250001F06A /* Profile Screen */,
+				1D4E0DC02B071D1B0001F06A /* Community Screen */,
+				1D4E0DBF2B071D0F0001F06A /* MyEvent Screen */,
 				F3841D002B06A3A400152382 /* SignupPage */,
 				F3841CFB2B06A26D00152382 /* SigninPage */,
 				F3841CF62B069C0A00152382 /* LandingPage */,
@@ -181,12 +234,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D4E0DCE2B071F4B0001F06A /* CommunityView.swift in Sources */,
 				F3841CF52B069A9800152382 /* LandingView.swift in Sources */,
 				F3841CFD2B06A38D00152382 /* SignupViewController.swift in Sources */,
+				1D4E0DC52B071D590001F06A /* MyProfielView.swift in Sources */,
+				1D4E0DC82B071E370001F06A /* TabNavBarViewController.swift in Sources */,
 				F3841CE32B06970300152382 /* ViewController.swift in Sources */,
+				1D4E0DC32B071D490001F06A /* MyProfileViewController.swift in Sources */,
 				F3841CFA2B06A16D00152382 /* SigninViewController.swift in Sources */,
+				1D4E0DD02B071F590001F06A /* CommunityViewController.swift in Sources */,
+				1D4E0DCC2B071F220001F06A /* MyEventView.swift in Sources */,
 				F3841CFF2B06A39D00152382 /* SignupView.swift in Sources */,
 				F3841CF82B06A0F200152382 /* SigninView.swift in Sources */,
+				1D4E0DCA2B071F130001F06A /* MyEventViewController.swift in Sources */,
 				F3841CDF2B06970300152382 /* AppDelegate.swift in Sources */,
 				F3841CE12B06970300152382 /* SceneDelegate.swift in Sources */,
 			);

@@ -18,6 +18,12 @@ class SigninViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        signinView.buttonSignin.addTarget(self, action: #selector(buttonSigninTapped), for: .touchUpInside)
+    }
+    
+    @objc func buttonSigninTapped() {
+        let tabNavVC = TabNavBarViewController()
+        self.navigationController?.pushViewController(tabNavVC, animated: true)
     }
 
 }
