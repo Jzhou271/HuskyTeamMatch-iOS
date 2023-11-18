@@ -10,6 +10,7 @@ import FirebaseAuth
 
 class SigninViewController: UIViewController {
     let signinView = SigninView()
+    let childProgressView = ProgressSpinnerViewController()
     
     override func loadView() {
         view = signinView
@@ -40,10 +41,11 @@ class SigninViewController: UIViewController {
     }
 
     func signInToFirebase(email: String, password: String){
-        //MARK: can you display progress indicator here?
+        showActivityIndicator()
         //MARK: authenticating the user...
         Auth.auth().signIn(withEmail: email, password: password, completion: {(result, error) in
             if error == nil{
+                
                 // push main screen
                 let tabNavVC = TabNavBarViewController()
                 self.navigationController?.popViewController(animated: true)
@@ -54,5 +56,6 @@ class SigninViewController: UIViewController {
             }
             
         })
+        self.hideActivityIndicator()
     }
 }

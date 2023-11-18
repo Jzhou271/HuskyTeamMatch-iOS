@@ -8,6 +8,8 @@
 import Foundation
 import UIKit
 
+let NEU_CAMPUS = ["Arlington", "Boston", "Charlotte", "London","Miami", "Oakland", "Portland", "San Francisco", "Silicon Valley", "Seatle", "Toronto", "Vancouver"]
+
 func isValidEmail(_ email: String) -> Bool {
     let emailRegEx = "[A-Z0-9a-z._%+-]+@northeastern.edu"
 

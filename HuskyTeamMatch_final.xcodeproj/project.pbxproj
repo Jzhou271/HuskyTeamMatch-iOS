@@ -33,6 +33,11 @@
 		F3841CFD2B06A38D00152382 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3841CFC2B06A38D00152382 /* SignupViewController.swift */; };
 		F3841CFF2B06A39D00152382 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3841CFE2B06A39D00152382 /* SignupView.swift */; };
 		F3B260472B0804DF007ACD5D /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B260462B0804DF007ACD5D /* Utilities.swift */; };
+		F3B2604A2B0897A7007ACD5D /* ProgressSpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B260492B0897A7007ACD5D /* ProgressSpinnerViewController.swift */; };
+		F3B2604C2B08980B007ACD5D /* ProgressSpinnerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B2604B2B08980B007ACD5D /* ProgressSpinnerDelegate.swift */; };
+		F3B2604E2B0898B2007ACD5D /* SignupProgressIndicatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B2604D2B0898B2007ACD5D /* SignupProgressIndicatorManager.swift */; };
+		F3B260502B089A76007ACD5D /* SigninProgressIndicatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B2604F2B089A76007ACD5D /* SigninProgressIndicatorManager.swift */; };
+		F3B260522B089FCB007ACD5D /* UserCampus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B260512B089FCB007ACD5D /* UserCampus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +65,11 @@
 		F3841CFC2B06A38D00152382 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		F3841CFE2B06A39D00152382 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		F3B260462B0804DF007ACD5D /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		F3B260492B0897A7007ACD5D /* ProgressSpinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressSpinnerViewController.swift; sourceTree = "<group>"; };
+		F3B2604B2B08980B007ACD5D /* ProgressSpinnerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressSpinnerDelegate.swift; sourceTree = "<group>"; };
+		F3B2604D2B0898B2007ACD5D /* SignupProgressIndicatorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupProgressIndicatorManager.swift; sourceTree = "<group>"; };
+		F3B2604F2B089A76007ACD5D /* SigninProgressIndicatorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninProgressIndicatorManager.swift; sourceTree = "<group>"; };
+		F3B260512B089FCB007ACD5D /* UserCampus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCampus.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +141,7 @@
 		F3841CDD2B06970300152382 /* HuskyTeamMatch_final */ = {
 			isa = PBXGroup;
 			children = (
+				F3B260482B08977B007ACD5D /* Progress Indicator */,
 				1D4E0DC62B071DF50001F06A /* TabNav Bar */,
 				1D4E0DC12B071D250001F06A /* Profile Screen */,
 				1D4E0DC02B071D1B0001F06A /* Community Screen */,
@@ -147,6 +158,7 @@
 				F3841CEC2B06970500152382 /* Info.plist */,
 				F33364A72B07E90500905648 /* GoogleService-Info.plist */,
 				F3B260462B0804DF007ACD5D /* Utilities.swift */,
+				F3B260512B089FCB007ACD5D /* UserCampus.swift */,
 			);
 			path = HuskyTeamMatch_final;
 			sourceTree = "<group>";
@@ -165,6 +177,7 @@
 			children = (
 				F3841CF72B06A0F200152382 /* SigninView.swift */,
 				F3841CF92B06A16D00152382 /* SigninViewController.swift */,
+				F3B2604F2B089A76007ACD5D /* SigninProgressIndicatorManager.swift */,
 			);
 			path = SigninPage;
 			sourceTree = "<group>";
@@ -175,8 +188,18 @@
 				F3841CFC2B06A38D00152382 /* SignupViewController.swift */,
 				F3841CFE2B06A39D00152382 /* SignupView.swift */,
 				F33364B42B07FAB800905648 /* SignupFirebaseManager.swift */,
+				F3B2604D2B0898B2007ACD5D /* SignupProgressIndicatorManager.swift */,
 			);
 			path = SignupPage;
+			sourceTree = "<group>";
+		};
+		F3B260482B08977B007ACD5D /* Progress Indicator */ = {
+			isa = PBXGroup;
+			children = (
+				F3B260492B0897A7007ACD5D /* ProgressSpinnerViewController.swift */,
+				F3B2604B2B08980B007ACD5D /* ProgressSpinnerDelegate.swift */,
+			);
+			path = "Progress Indicator";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,14 +291,19 @@
 				1D4E0DC82B071E370001F06A /* TabNavBarViewController.swift in Sources */,
 				F3841CE32B06970300152382 /* ViewController.swift in Sources */,
 				1D4E0DC32B071D490001F06A /* MyProfileViewController.swift in Sources */,
+				F3B260502B089A76007ACD5D /* SigninProgressIndicatorManager.swift in Sources */,
 				F3841CFA2B06A16D00152382 /* SigninViewController.swift in Sources */,
 				F33364B52B07FAB800905648 /* SignupFirebaseManager.swift in Sources */,
 				1D4E0DD02B071F590001F06A /* CommunityViewController.swift in Sources */,
 				F3B260472B0804DF007ACD5D /* Utilities.swift in Sources */,
+				F3B2604A2B0897A7007ACD5D /* ProgressSpinnerViewController.swift in Sources */,
 				1D4E0DCC2B071F220001F06A /* MyEventView.swift in Sources */,
 				F3841CFF2B06A39D00152382 /* SignupView.swift in Sources */,
+				F3B260522B089FCB007ACD5D /* UserCampus.swift in Sources */,
+				F3B2604E2B0898B2007ACD5D /* SignupProgressIndicatorManager.swift in Sources */,
 				F3841CF82B06A0F200152382 /* SigninView.swift in Sources */,
 				1D4E0DCA2B071F130001F06A /* MyEventViewController.swift in Sources */,
+				F3B2604C2B08980B007ACD5D /* ProgressSpinnerDelegate.swift in Sources */,
 				F3841CDF2B06970300152382 /* AppDelegate.swift in Sources */,
 				F3841CE12B06970300152382 /* SceneDelegate.swift in Sources */,
 			);

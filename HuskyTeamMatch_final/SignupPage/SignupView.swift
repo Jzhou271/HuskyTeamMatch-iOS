@@ -11,12 +11,13 @@ class SignupView: UIView {
     var labelName:UILabel!
     var labelEmail:UILabel!
     var labelPassword:UILabel!
-    var labelLocation:UILabel!
     var textFieldName:UITextField!
     var textFieldEmail:UITextField!
     var textFieldPassword:UITextField!
-    var textFieldLocation:UITextField!
+    var buttonTakePhoto:UIButton!
+    var buttonSelectCampus:UIButton!
     var buttonSignup:UIButton!
+    var labelPhoto:UILabel!
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -26,10 +27,11 @@ class SignupView: UIView {
         setupLabelName()
         setupLabelEmail()
         setupLabelPassword()
-        setupLabelLocation()
         setupTextFieldEmail()
         setupTextFieldPassword()
-        setupTextFieldLocation()
+        setuplabelPhoto()
+        setupButtonSelectCampus()
+        setupbuttonTakePhoto()
         setupButtonSignup()
         
         initConstraints()
@@ -56,13 +58,6 @@ class SignupView: UIView {
         self.addSubview(labelPassword)
     }
     
-    func setupLabelLocation(){
-        labelLocation = UILabel()
-        labelLocation.text = "Location"
-        labelLocation.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(labelLocation)
-    }
-    
     func setupTextFieldName(){
         textFieldName = UITextField()
         textFieldName.autocapitalizationType = .none
@@ -87,12 +82,34 @@ class SignupView: UIView {
         self.addSubview(textFieldPassword)
     }
     
-    func setupTextFieldLocation(){
-        textFieldLocation = UITextField()
-        textFieldLocation.autocapitalizationType = .none
-        textFieldLocation.borderStyle = .roundedRect
-        textFieldLocation.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(textFieldLocation)
+    func setuplabelPhoto(){
+        labelPhoto = UILabel()
+        labelPhoto.text = "Add Profile Photo"
+        labelPhoto.font = UIFont.boldSystemFont(ofSize: 14)
+        labelPhoto.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(labelPhoto)
+    }
+    
+    func setupButtonSelectCampus(){
+        buttonSelectCampus = UIButton(type: .system)
+        buttonSelectCampus.titleLabel?.font = .boldSystemFont(ofSize: 16)
+        buttonSelectCampus.setTitle("Please Select a Campus", for: .normal)
+        buttonSelectCampus.showsMenuAsPrimaryAction = true
+        buttonSelectCampus.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(buttonSelectCampus)
+    }
+    
+    func setupbuttonTakePhoto(){
+        buttonTakePhoto = UIButton(type: .system)
+        buttonTakePhoto.setTitle("", for: .normal)
+        buttonTakePhoto.setImage(UIImage(systemName: "camera.fill"), for: .normal)
+        //buttonTakePhoto.setImage(UIImage(systemName: "camera.fill")?.withRenderingMode(.alwaysOriginal), for: .normal)
+        buttonTakePhoto.contentHorizontalAlignment = .fill
+        buttonTakePhoto.contentVerticalAlignment = .fill
+        buttonTakePhoto.imageView?.contentMode = .scaleAspectFit
+        buttonTakePhoto.showsMenuAsPrimaryAction = true
+        buttonTakePhoto.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(buttonTakePhoto)
     }
     
     func setupButtonSignup(){
@@ -130,15 +147,20 @@ class SignupView: UIView {
             textFieldPassword.leadingAnchor.constraint(equalTo: labelPassword.leadingAnchor),
             textFieldPassword.trailingAnchor.constraint(equalTo: labelPassword.trailingAnchor),
             
-            labelLocation.topAnchor.constraint(equalTo: textFieldPassword.bottomAnchor, constant: 10),
-            labelLocation.leadingAnchor.constraint(equalTo: textFieldEmail.leadingAnchor),
-            labelLocation.trailingAnchor.constraint(equalTo: textFieldEmail.trailingAnchor),
+            buttonSelectCampus.topAnchor.constraint(equalTo: textFieldPassword.bottomAnchor, constant: 10),
+            buttonSelectCampus.leadingAnchor.constraint(equalTo: labelPassword.leadingAnchor),
+            buttonSelectCampus.trailingAnchor.constraint(equalTo: labelPassword.trailingAnchor),
             
-            textFieldLocation.topAnchor.constraint(equalTo: labelLocation.bottomAnchor, constant: 10),
-            textFieldLocation.leadingAnchor.constraint(equalTo: labelPassword.leadingAnchor),
-            textFieldLocation.trailingAnchor.constraint(equalTo: labelPassword.trailingAnchor),
+            buttonTakePhoto.topAnchor.constraint(equalTo: buttonSelectCampus.bottomAnchor, constant: 10),
+            buttonTakePhoto.leadingAnchor.constraint(equalTo: labelPassword.leadingAnchor),
+            buttonTakePhoto.trailingAnchor.constraint(equalTo: labelPassword.trailingAnchor),
+            buttonTakePhoto.widthAnchor.constraint(equalToConstant: 100),
+            buttonTakePhoto.heightAnchor.constraint(equalToConstant: 100),
             
-            buttonSignup.topAnchor.constraint(equalTo: textFieldLocation.bottomAnchor, constant: 10),
+            labelPhoto.topAnchor.constraint(equalTo: buttonTakePhoto.bottomAnchor),
+            labelPhoto.centerXAnchor.constraint(equalTo: self.safeAreaLayoutGuide.centerXAnchor),
+            
+            buttonSignup.topAnchor.constraint(equalTo: labelPhoto.bottomAnchor, constant: 10),
             buttonSignup.leadingAnchor.constraint(equalTo: textFieldPassword.leadingAnchor),
             buttonSignup.trailingAnchor.constraint(equalTo: textFieldPassword.trailingAnchor),
         ])
